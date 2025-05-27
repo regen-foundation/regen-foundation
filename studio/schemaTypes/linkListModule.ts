@@ -40,7 +40,13 @@ export default defineType({
             }),
             defineField({
               name: 'subinfo',
-              title: 'Supporting Info',
+              title: 'Supporting Info (Line 1)',
+              type: 'string',
+              description: 'ex: Event date',
+            }),
+            defineField({
+              name: 'subinfoTwo',
+              title: 'Supporting Info (Line 2)',
               type: 'string',
               description: 'ex: Event location',
             }),

@@ -44,7 +44,7 @@
 <BGGrid></BGGrid>
 
 <span id="_pageTop"></span>
-<div  bind:this={sectionDivs["_pageTop"]} class="h-[calc(100dvh-12rem)] pt-60">
+<div  bind:this={sectionDivs["_pageTop"]} class="h-[calc(100dvh-6rem)] sm:h-[calc(100dvh-12rem)] sm:pt-60">
 	<div class="flex h-full w-dvw items-center justify-center px-4.5">
 		<div class="max-w-2xl text-lg">
 			<BlockContent value={data.homePage.homepageContent}></BlockContent>

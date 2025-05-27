@@ -4,9 +4,9 @@
 	let { listItems } = $props();
 </script>
 
-<div class="flex w-full max-w-4xl flex-col gap-6 px-4 text-sm sm:gap-4">
+<div class="flex w-full max-w-4xl flex-col gap-8 px-4 text-sm">
 	{#each listItems as item}
-		<div class="flex gap-4">
+		<div class="flex flex-col sm:flex-row sm:gap-4">
 			{#if item.subinfo || item.subinfoTwo}
 				<div class="w-40 sm:w-48 shrink-0">
 					{#if item.subinfo}

@@ -71,7 +71,10 @@
 		</div>
 
 		{#if section.slug.current === 'news'}
+		<div class="my-16 flex w-full  justify-center p-8 ">
+
 			<NewsletterForm headerText={data.siteInfo.newsletterHeaderText} buttonText={data.siteInfo.newsletterButtonText} successText={data.siteInfo.newsletterSuccessText}></NewsletterForm>
+			</div>
 		{/if}
 	</div>
 {/each}

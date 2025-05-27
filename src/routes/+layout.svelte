@@ -64,4 +64,4 @@
 <div class="block sm:hidden">
 <MobileHeader donateLabel={data?.siteInfo?.donateButtonLabel} donateLink={data?.siteInfo?.donateButtonLink} blurb={data?.siteInfo?.headerText} sections={data?.sections}></MobileHeader>
 </div>
-<SiteFooter copyright={data?.siteInfo?.copyrightText} textOnlyPages={data?.siteInfo?.textOnlyPages}></SiteFooter>
+<SiteFooter siteInfo={data?.siteInfo}></SiteFooter>

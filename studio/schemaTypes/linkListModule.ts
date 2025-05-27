@@ -34,9 +34,15 @@ export default defineType({
           fields: [
             defineField({
               name: 'title',
-              title: 'Title',
+              title: 'Title (Line 1)',
               type: 'string',
               description: 'ex: Event title',
+            }),
+            defineField({
+              name: 'titleTwo',
+              title: 'Title (Line 2)',
+              type: 'string',
+              description: 'ex: Event info',
             }),
             defineField({
               name: 'subinfo',
@@ -48,7 +54,7 @@ export default defineType({
               name: 'subinfoTwo',
               title: 'Supporting Info (Line 2)',
               type: 'string',
-              description: 'ex: Event location',
+              description: 'ex: Event location / Citation',
             }),
             defineField({
               name: 'link',

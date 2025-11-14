@@ -1,0 +1,19 @@
+.pt-list-item-bullet-indented [data-list-item='bullet-indented'] [data-list-prefix] > span::before {
+  content: '*';
+  font-size: 1em;
+  display: inline-block;
+  padding-top: 2px;
+}
+
+.pt-list-item-number-indented [data-list-item='number-indented'] [data-list-prefix] > span::before {
+  content: '0.';
+  font-size: 1em;
+  display: inline-block;
+  padding-top: 2px;
+}
+
+.pt-list-item-bullet-indented,
+.pt-list-item-number-indented {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}

@@ -5,7 +5,7 @@
 </script>
 
 
-    <div class="max-w-4xl w-full px-4 text-lg">
+    <div class="max-w-4xl w-full px-4 text-lg pb-24">
             
         <BlockContent {value}></BlockContent>
             {#if cta}

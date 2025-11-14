@@ -6,6 +6,12 @@ export default defineType({
   type: 'document',
   fields: [
     defineField({
+      name: 'title',
+      title: 'Title',
+      type: 'string',
+      hidden: true
+    }),
+    defineField({
       name: 'homepageContent',
       title: 'Homepage Content',
       type: 'blockContent',

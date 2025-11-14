@@ -1,6 +1,8 @@
 import {defineType, defineArrayMember} from 'sanity'
 import { ImageIcon } from '@sanity/icons'
-
+import { RxButton } from "react-icons/rx";
+import { FaNoteSticky } from "react-icons/fa6";
+import './styles.css';
 /**
  * This is the schema definition for the rich text fields used for
  * for this blog studio. When you import it in schemas.js it can be
@@ -30,10 +32,17 @@ export default defineType({
         {title: 'H2', value: 'h2'},
         {title: 'H3', value: 'h3'},
         {title: 'Quote', value: 'blockquote'},
+        {title: 'Normal Centered', value: 'normal-centered', component: ({ children }) => <p style={{textAlign: "center"}}>{children}</p>},
+        {title: 'Normal Indented', value: 'normal-indented', component: ({ children }) => <div style={{paddingLeft: "2rem", paddingRight: "2rem"}}>{children}</div>},
+        {title: 'H1 Centered', value: 'h1-centered', component: ({ children }) => <h1 style={{textAlign: "center"}}>{children}</h1>},
+        {title: 'H2 Centered', value: 'h2-centered', component: ({ children }) => <h2 style={{textAlign: "center"}}>{children}</h2>},
+        {title: 'H3 Centered', value: 'h3-centered', component: ({ children }) => <h3 style={{textAlign: "center"}}>{children}</h3>},
       ],
       lists: [
-        {title: 'Bullet', value: 'bullet'},
-        {title: 'Numbered', value: 'number'}
+        {title: 'Bullet', value: 'bullet',},
+        {title: 'Numbered', value: 'number'},
+        {title: 'Bullet - Indented', value: 'bullet-indented'},
+        {title: 'Numbered — Indented', value: 'number-indented'}
     ],
       // Marks let you mark up inline text in the block editor.
       marks: {
@@ -42,6 +51,7 @@ export default defineType({
         decorators: [
           {title: 'Strong', value: 'strong'},
           {title: 'Emphasis', value: 'em'},
+
 
         ],
         // Annotations can be any object structure – e.g. a link or a footnote.
@@ -62,6 +72,7 @@ export default defineType({
             title: 'Footnote',
             name: 'footnote',
             type: 'object',
+            icon: FaNoteSticky,
             fields: [
               {
                 name: 'text',
@@ -85,9 +96,34 @@ export default defineType({
           type: 'blockContent',
           name: 'caption',
           title: 'Caption'
+        },
+        {
+          type: 'string',
+          name: 'alignment',
+          title: 'Alignment',
+          options: {
+            list: ['left', 'center', 'right']
+          }
         }
       ]
     },
-
+    {
+      type: 'object',
+      name: 'button',
+      title: 'Button',
+      icon: RxButton,
+      fields: [
+        {
+          type: 'string',
+          name: 'label',
+          title: 'Label'
+        },
+        {
+          type: 'string',
+          name: 'url',
+          title: 'URL'
+        },
+      ]
+    }
   ],
 })

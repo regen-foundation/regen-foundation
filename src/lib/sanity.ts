@@ -26,11 +26,11 @@ export function urlFor(source: Image) {
 }
 
 export const getThumbnailImg = (imgRef: Image) => {
-	return urlFor(imgRef).width(600).format('webp').fit('max').url();
+	return urlFor(imgRef).width(600).fit('max').url();
 };
 
 export const getImgUrl = (imgRef: Image) => {
-	return urlFor(imgRef).width(1600).format('webp').fit('max').url();
+	return urlFor(imgRef).width(1600).fit('max').url();
 };
 
 export async function getSiteInfo(): Promise<any> {

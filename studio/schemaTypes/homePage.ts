@@ -18,6 +18,11 @@ export default defineType({
       description: 'This content shows up before all of the other sections.'
     }),
     defineField({
+      name: 'showHomepageContent',
+      title: 'Show Homepage Content?',
+      type: 'boolean',
+    }),
+    defineField({
       name: 'sections',
       title: 'Sections',
       type: 'array',

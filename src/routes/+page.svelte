@@ -44,13 +44,18 @@
 <BGGrid></BGGrid>
 
 <span id="_pageTop"></span>
+	{#if data.homePage.showHomepageContent}
+
 <div  bind:this={sectionDivs["_pageTop"]} class="h-[calc(100dvh-6rem)] sm:h-[calc(100dvh-12rem)] pt-24 sm:pt-60">
-	<div class="flex h-full w-dvw items-center justify-center px-4.5">
+		<div class="flex h-full w-dvw items-center justify-center px-4.5">
 		<div class="max-w-2xl text-lg">
 			<BlockContent value={data.homePage.homepageContent}></BlockContent>
 		</div>
 	</div>
+
 </div>
+	{/if}
+
 
 {#each data.homePage.sections as section}
 	<div id={section.slug.current} class="min-h-dvh pt-24 sm:pt-48">
